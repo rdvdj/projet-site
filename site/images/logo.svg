@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img" aria-label="Point de rupture">
+  <circle cx="30" cy="40" r="28" fill="#ff3e8a"/>
+  <polygon points="34,6 48,6 26,74 12,74" fill="#ffd23f"/>
+  <g font-family="Anton, Impact, 'Arial Black', Arial, sans-serif" font-weight="900" font-size="30" fill="#f4f1ff">
+    <text x="72" y="36">POINT</text>
+    <text x="72" y="72">DE RUPTURE</text>
+  </g>
+</svg>

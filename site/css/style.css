@@ -1,0 +1,949 @@
+/* =========================================================
+   POINT DE RUPTURE - style.css
+   Kevin, dernière modif le 14 juin
+
+   Version ORDINATEUR : terminée, validée par la cliente.
+   Version téléphone / tablette : pas eu le temps...
+   Désolé à celui ou celle qui reprend. Bon courage !
+   ========================================================= */
+
+
+/* 1. *************** BASE ****************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Archivo", Arial, sans-serif;
+    color: #f4f1ff;
+    background-color: #14112b;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-family: "Anton", Impact, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 48px;
+    margin-bottom: 32px;
+}
+
+.section {
+    padding: 80px 5vw;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffd23f;
+    color: #14112b;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+/* 2. *************** BANDEAU PROMO ****************/
+.bandeau-promo {
+    background-color: #ff3e8a;
+    text-align: center;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+
+
+/* 3. *************** HEADER ****************/
+.header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    padding: 20px 5vw;
+}
+
+.logo img {
+    width: 170px;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.actif {
+    color: #ffd23f;
+}
+
+.btn-header {
+    background-color: #ffd23f;
+    color: #14112b;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+/* 4. *************** HÉRO ****************/
+/* Kevin : le dégradé sombre par-dessus la photo rend le texte lisible */
+.hero {
+    height: 700px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 5vw;
+    padding-bottom: 80px;
+    background-image: linear-gradient(rgba(20, 17, 43, 0.3), rgba(20, 17, 43, 0.85)), url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-dates {
+    color: #ffd23f;
+    font-weight: 800;
+    font-size: 19px;
+}
+
+.hero h1 {
+    font-size: 120px;
+    text-transform: uppercase;
+}
+
+.hero-slogan {
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+
+/* 5. *************** CHIFFRES ****************/
+.chiffres {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 5vw;
+    background-color: #ffd23f;
+    color: #14112b;
+}
+
+.chiffre {
+    width: 23%;
+    text-align: center;
+}
+
+.chiffre strong {
+    display: block;
+    font-family: "Anton", Impact, sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+.chiffre span {
+    font-weight: 600;
+}
+
+
+/* 6. *************** TÊTES D'AFFICHE ****************/
+.artistes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.artiste {
+    width: 23%;
+    
+}
+
+.artiste img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.artiste h3 {
+    font-size: 29px;
+}
+
+.artiste p {
+    color: #b9b3d9;
+}
+
+.lien-programme {
+    font-weight: 800;
+    color: #ffd23f;
+}
+
+
+/* 7. *************** L'ESPRIT DU FESTIVAL ****************/
+#esprit {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    background-color: #1f1a40;
+}
+
+.esprit-texte {
+    width: 45%;
+}
+
+.esprit-texte p {
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+/* Kevin : l'image a pile la bonne taille sur mon écran */
+.esprit-image {
+    width: 560px;
+    border-radius: 16px;
+}
+
+
+/* 8. *************** PARTENAIRES ****************/
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos img {
+    width: 14%;
+}
+
+
+/* 9. *************** FOOTER ****************/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 64px 5vw;
+    background-color: #0b0920;
+}
+
+.footer-col {
+    width: 30%;
+}
+
+.footer-col img {
+    width: 150px;
+    margin-bottom: 16px;
+}
+
+.footer h4 {
+    color: #ffd23f;
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+
+/* 10. *************** BARRE MOBILE ****************/
+/* Kevin : la cliente veut un bouton "Acheter mon pass" collé en bas de
+   l'écran, mais SEULEMENT sur téléphone. Il est dans le HTML de chaque
+   page, caché pour l'instant. TODO */
+.barre-mobile {
+    display: none;
+    background-color: #ffd23f;
+    color: #14112b;
+    text-align: center;
+    font-weight: 800;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+/* 11. *************** PAGES INTÉRIEURES ****************/
+.page-titre {
+    padding: 64px 5vw;
+    padding-bottom: 32px;
+}
+
+.page-titre h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+.page-titre p {
+    font-size: 19px;
+    color: #b9b3d9;
+}
+
+
+/* 12. *************** PROGRAMME ****************/
+.jours {
+    display: flex;
+    gap: 16px;
+    padding: 16px 5vw;
+    background-color: #14112b;
+    border-bottom: 1px solid #2e2858;
+    position: sticky; /* T0 11 */
+    top: 0; /* T0 11 */
+    overflow-x: scroll;
+}
+.jours::-webkit-scrollbar {
+    display: none;
+}
+.jours a {
+    white-space: nowrap; /* Kevin : le texte des onglets ne passe jamais à la ligne */
+    padding: 8px 20px;
+    border: 2px solid #ffd23f;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.programme {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 32px 5vw;
+    padding-bottom: 80px;
+}
+
+.scenes {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #1f1a40;
+    padding: 24px;
+    border-radius: 16px;
+}
+
+.scenes h3 {
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+
+.scenes p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.scenes-info {
+    color: #b9b3d9;
+    font-size: 14px;
+    padding-top: 16px;
+}
+
+.pastille-grande,
+.pastille-chapiteau,
+.pastille-lac {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.pastille-grande {
+    background-color: #ff3e8a;
+}
+
+.pastille-chapiteau {
+    background-color: #ffd23f;
+}
+
+.pastille-lac {
+    background-color: #3ee0c5;
+}
+
+.concerts {
+    width: 100%;
+}
+
+.concerts h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+#samedi,
+#dimanche {
+    margin-top: 40px;
+}
+
+.concert {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    background-color: #1f1a40;
+    border-radius: 12px;
+}
+
+.heure {
+    width: 80px;
+    flex-shrink: 0;
+    font-family: "Anton", Impact, sans-serif;
+    font-size: 24px;
+    color: #ffd23f;
+}
+
+.nom {
+    width: 100%;
+    font-size: 22px;
+}
+
+.style {
+    width: 110px;
+    flex-shrink: 0;
+    color: #b9b3d9;
+}
+
+.scene-grande,
+.scene-chapiteau,
+.scene-lac {
+    width: 130px;
+    flex-shrink: 0;
+    padding: 5px 12px;
+    border-radius: 999px;
+    color: #14112b;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.scene-grande {
+    background-color: #ff3e8a;
+}
+
+.scene-chapiteau {
+    background-color: #ffd23f;
+}
+
+.scene-lac {
+    background-color: #3ee0c5;
+}
+
+
+/* 13. *************** BILLETTERIE ****************/
+.tarifs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tarif {
+    position: relative;
+    width: 31%;
+    padding: 40px 32px;
+    background-color: #1f1a40;
+    border-radius: 20px;
+}
+
+#tarif-vedette {
+    border: 3px solid #ffd23f;
+}
+
+.badge {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 16px;
+    background-color: #ff3e8a;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.tarif h3 {
+    font-size: 32px;
+}
+
+.prix {
+    font-family: "Anton", Impact, sans-serif;
+    font-size: 56px;
+    color: #ffd23f;
+    margin-bottom: 16px;
+}
+
+.tarif ul {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.tarif li {
+    padding: 6px 0;
+    border-bottom: 1px solid #2e2858;
+}
+
+.questions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.question {
+    width: 48%;
+    margin-bottom: 32px;
+}
+
+.question h3 {
+    font-family: "Archivo", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 19px;
+    letter-spacing: 0;
+    color: #ffd23f;
+    margin-bottom: 6px;
+}
+.esprit{
+    display: grid;
+    grid-template-columns: 1fr 45%;
+    gap: 30px;
+    align-items: center;
+}
+
+.esprit-image {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+}
+.logos img {
+
+    width: 100%;
+    height: 90px;
+    object-fit: contain;
+
+}
+
+.icone {
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+    justify-content: center;
+}
+
+
+/* 14. *************** RESPONSIVE ****************/
+/* Kevin : j'ai commencé le téléphone mais ça marche pas
+   sur mon iPhone ?? Je comprends pas. */
+
+@media (min-width:1440px) /*T0 15 */
+{
+.artiste {
+  position: relative;
+}
+
+.artiste img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.artiste h3 {
+  position: absolute;
+  top: 275px;
+  left: 15px;
+  margin: 0;
+  color: white;
+  z-index: 2;
+}
+.badge-nouveau {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff1493;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 3;
+}
+ 
+   .section {
+    padding-left:12vw;
+    padding-right:12vw;
+}
+ .header {
+    padding-left:12vw ;
+    padding-right:12vw ;
+ }
+ .hero {
+    padding-left: 12vw;
+    padding-right: 12vw;
+ }
+
+ .chiffres {
+     padding-left:12vw;
+     padding-right:12vw;
+ }
+ .footer {
+     padding-left:12vw;
+     padding-right:12vw;
+ }
+ .page-titre {
+    padding-left: 12vw;
+    padding-right: 12vw;
+ }
+ .jours {
+    padding-left: 12vw;
+    padding-right: 12vw;
+ }
+
+ .programme {
+    padding-left: 12vw;
+    padding-right: 12vw;
+ }
+.logos{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap:30px;
+        
+}
+} 
+
+
+
+@media (max-width:1281px){
+    
+.artiste {
+  position: relative;
+}
+
+.artiste img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.artiste h3 {
+  position: absolute;
+  top: 275px;
+  left: 15px;
+  margin: 0;
+  color: white;
+  z-index: 2;
+}
+.badge-nouveau {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff1493;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 3;
+}
+    .hero{    height:85vh ;
+    }
+    .questions {
+        flex-wrap: wrap;
+    }
+
+    
+    .chiffres {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+    .artistes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+    .artiste{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        
+    }
+    .logos{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap:30px;
+        
+    }
+}
+@media (max-width: 1024px) {
+    .artiste {
+    position: relative;
+}
+
+.artiste img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.artiste h3 {
+  position: absolute;
+  top: 275px;
+  left: 15px;
+  margin: 0;
+  color: white;
+  z-index: 2;
+}
+.badge-nouveau {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff1493;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 3;
+}
+    .artistes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .artiste{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* -------TABLETTE------- */
+
+
+@media (max-width: 768px) {
+.artiste {
+  position: relative;
+}
+
+.artiste img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.artiste h3 {
+  position: absolute;
+  top: 275px;
+  left: 15px;
+  margin: 0;
+  color: white;
+  z-index: 2;
+}
+.badge-nouveau {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff1493;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 3;
+}
+    .scenes {
+        display: none; /* T0 12 */
+    }
+    .tarifs {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.tarif {
+        width: 60%;  /* T0 13 */
+    } 
+
+
+    .chiffres {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .questions {
+        flex-direction: column;
+    }
+    #esprit {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .esprit-image {
+        display: grid;
+        grid-row: 1;
+    }
+    .logos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:30px;
+        
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+/* --------TELEPHONE-------- */
+
+
+@media (max-width: 480px) {
+.artiste {
+  position: relative;
+}
+
+.artiste img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.artiste h3 {
+  position: absolute;
+  top: 275px;
+  left: 15px;
+  margin: 0;
+  color: white;
+  z-index: 2;
+}
+.badge-nouveau {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff1493;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 3;
+}
+    .hero-contenu h1 {   
+        font-size: 48px;
+     
+    }
+    .page-titre h1 {
+        font-size: 48px;
+    }
+    .concert {
+        flex-direction: column; /* T0 12 */
+    }
+
+    .hero{
+    height: 75vh;
+    }
+    .tarif {
+        width: 100%; /* T0 13 */
+    }
+
+    .questions {
+        flex-direction: column;
+    }
+
+
+    .chiffres {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artiste{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    .artistes {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .barre-mobile {
+    display: block;
+
+    
+    position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .logos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:60px;
+    }
+    header .btn-header {
+        display: none;
+    }
+    .artistes {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: auto;
+    max-width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .artiste {
+    flex: 0 0 85%;
+  }
+
+  .retour-haut {
+    position: fixed;
+    bottom: 53px;
+    right: 3px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+}
+
+
+/* TODO : petit portable */
+
+/* TODO : tablette */
+
+/* TODO : téléphone */
+
+/* TODO : grand écran (la directrice a un écran de 27 pouces...) */
